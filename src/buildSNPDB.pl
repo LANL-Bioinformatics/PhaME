@@ -83,7 +83,7 @@ GetOptions(
     'i=s'    => \$indir,
     'r=s'    => \$reffile,
     'l=s'    => \$refheader,
-    'c=s'    => \$coding,
+    'c=i'    => \$coding,
     'p=s'    => \$project,
     'g=f'    => \$gap_cutoff,
     'help|h' => sub { usage() },
