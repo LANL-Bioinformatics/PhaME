@@ -438,7 +438,7 @@ sub movefiles {
     
     print "\nFinalizing...\n";
     system(
-        "mkdir $dir/alignments $dir/tables $dir/miscs; mv $dir/*.fna $dir/alignments/; mv $dir/*.txt $dir/tables; mv $dir/*.delta $dir/miscs; mv $dir/*.*filter $dir/miscs"
+        "mkdir $dir/alignments $dir/tables $dir/miscs; echo $dir/*.fna | xargs mv -t $dir/alignments/; echo $dir/*.txt | xargs mv -t $dir/tables; echo $dir/*.delta | xargs mv -t $dir/miscs; echo $dir/*.*filter | xargs mv -t $dir/miscs"
     );
     if ($trees > 0){
         system("mkdir $dir/trees");
